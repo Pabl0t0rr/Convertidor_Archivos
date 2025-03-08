@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor PDF - Word</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Conversor de PDF a Word y viceversa</h1>
+        
+        <div class="file-input-wrapper">
+            <i class="fas fa-file-upload"></i>
+            <p>Arrastra tu archivo aquí o haz clic para seleccionar</p>
+            <p class="file-format">Formatos soportados: PDF, DOCX</p>
+            <input type="file" id="fileInput" accept=".pdf,.docx">
+            <div class="file-name" id="fileName"></div>
+        </div>
+        
+        <select id="conversionType">
+            <option value="pdf-to-word">PDF a Word</option>
+            <option value="word-to-pdf">Word a PDF</option>
+        </select>
+        
+        <button id="convertButton">
+            <i class="fas fa-sync-alt"></i> Convertir
+        </button>
+        
+        <p id="status"></p>
+        
+        <div class="progress-container" id="progressContainer">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+    </div>
+
+    <!-- Scripts de bibliotecas -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/docx/7.8.2/docx.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.6.0/mammoth.browser.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    
+    <!-- Scripts personalizados -->
+    <script src="js/utils.js"></script>
+    <script src="js/pdf-to-word.js"></script>
+    <script src="js/word-to-pdf.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
+
